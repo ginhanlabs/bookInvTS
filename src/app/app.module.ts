@@ -8,6 +8,9 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentTabsComponent } from './main-content/content-tabs/content-tabs.component';
+import { SideNavItemComponent } from './side-nav/side-nav-item/side-nav-item.component';
+
+import {InventoryService} from './service/inventory.service';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,13 @@ import { ContentTabsComponent } from './main-content/content-tabs/content-tabs.c
     MainContentComponent,
     FooterComponent,
     ContentTabsComponent,
+    SideNavItemComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [InventoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

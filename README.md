@@ -1,3 +1,5 @@
+Redoing a new version of BookInv using Typescript, Angular and bootstrap 4+
+
 # BookInvTS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
