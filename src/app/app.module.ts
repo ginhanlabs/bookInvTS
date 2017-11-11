@@ -11,6 +11,11 @@ import { ContentTabsComponent } from './main-content/content-tabs/content-tabs.c
 import { SideNavItemComponent } from './side-nav/side-nav-item/side-nav-item.component';
 
 import {InventoryService} from './service/inventory.service';
+import { ValueByPublisherComponent } from './main-content/content-tabs/value-by-publisher/value-by-publisher.component';
+import { MostValuableIssuesComponent } from './main-content/content-tabs/most-valuable-issues/most-valuable-issues.component';
+import { ValueOfCollectionComponent } from './main-content/content-tabs/value-of-collection/value-of-collection.component';
+import { TabDetailsComponent } from './main-content/content-tabs/tab-details/tab-details.component';
+import { ChartComponent } from './main-content/content-tabs/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +26,11 @@ import {InventoryService} from './service/inventory.service';
     FooterComponent,
     ContentTabsComponent,
     SideNavItemComponent,
+    ValueByPublisherComponent,
+    MostValuableIssuesComponent,
+    ValueOfCollectionComponent,
+    TabDetailsComponent,
+    ChartComponent,
   ],
   imports: [
     BrowserModule,
