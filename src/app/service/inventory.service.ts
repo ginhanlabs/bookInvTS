@@ -13,7 +13,7 @@ export class InventoryService {
     ]
   }
 
-  getInventory() {
+  getTitles() {
     return [
       {publisher: "DC",
         "Titles" : [

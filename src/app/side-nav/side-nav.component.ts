@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {InventoryService} from '../service/inventory.service';
 import { ICompany } from '../interfaces/ICompany';
 
@@ -9,8 +9,11 @@ import { ICompany } from '../interfaces/ICompany';
 })
 export class SideNavComponent {
   companies: ICompany[];
+  @Input() totalCount: string;
+
   constructor(InventoryService: InventoryService) {
     this.companies = InventoryService.getCompanies();
+    this.totalCount = '0';
    }
   
  

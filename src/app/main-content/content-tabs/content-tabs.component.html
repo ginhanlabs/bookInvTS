@@ -1,77 +1,27 @@
 <ngb-tabset>
-    <ngb-tab title="Summary">
+    <ngb-tab title="The Collection">
       <ng-template ngbTabContent>
         <br/>
-          <table class="table table-bordered table-striped">
-              <thead class="thead-inverse">
-                <tr>
-                  <th>Total Titles</th>
-                  <th>First Name</th>
-                 
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>500</td>
-                 
-                </tr>
-                
-              </tbody>
-            </table>
+        <div class="row">
+          <div class="col-md-4">
+            <app-most-valuable-issues></app-most-valuable-issues>
+          </div>
+          <div class="col-md-4">
+            <app-value-by-publisher></app-value-by-publisher>
+          </div>
+          <div class="col-md-4">
+          <app-value-of-collection></app-value-of-collection>
+          </div>
+        </div>
+        <div class="row">
+          <app-chart></app-chart>
+        </div>
       </ng-template>
     </ngb-tab>
     <ngb-tab>
       <ng-template ngbTabTitle >Details</ng-template>
       <ng-template ngbTabContent>
-        <br/>
-        <h5>Amzaing Spiderman</h5>
-          <table class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th>Issue</th>
-                  <th>Price</th>
-                  <th>Qty</th>
-                  <th>Condition</th>
-                  <th>Value</th>
-                  <th>Box</th>
-                  <th>Notes</th>
-                  <th>Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>4.00</td>
-                  <td>1</td>
-                  <td>@good</td>
-                  <td>5.00</td>
-                  <td>1</td>
-                  <td>na</td>
-                  <td>01/02/1980</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>4.00</td>
-                  <td>1</td>
-                  <td>@good</td>
-                  <td>5.00</td>
-                  <td>1</td>
-                  <td>na</td>
-                  <td>01/02/1980</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>4.00</td>
-                  <td>1</td>
-                  <td>@good</td>
-                  <td>5.00</td>
-                  <td>1</td>
-                  <td>na</td>
-                  <td>01/02/1980</td>
-                </tr>
-              </tbody>
-            </table>
+        <app-tab-details></app-tab-details>
       </ng-template>
     </ngb-tab>
   </ngb-tabset>
