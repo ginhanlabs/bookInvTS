@@ -16,6 +16,8 @@ export class SideNavComponent {
     this.totalCount = '0';
    }
   
- 
+   trackByCompanyFn(index, item){
+     return index;
+   }
 
 }

@@ -17,4 +17,7 @@ export class SideNavItemComponent {
     this.inventoryList = InventoryService.getTitles();
    }
 
+   trackByTitleFn(index, item){
+     return index;
+   }
 }
