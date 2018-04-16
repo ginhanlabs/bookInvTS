@@ -16,6 +16,7 @@ import { MostValuableIssuesComponent } from './main-content/content-tabs/most-va
 import { ValueOfCollectionComponent } from './main-content/content-tabs/value-of-collection/value-of-collection.component';
 import { TabDetailsComponent } from './main-content/content-tabs/tab-details/tab-details.component';
 import { ChartComponent } from './main-content/content-tabs/chart/chart.component';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { ChartComponent } from './main-content/content-tabs/chart/chart.componen
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     NgbModule.forRoot()
+   
   ],
   providers: [InventoryService],
   bootstrap: [AppComponent]
