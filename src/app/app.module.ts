@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './footer/footer.component';
-import { ContentTabsComponent } from './main-content/content-tabs/content-tabs.component';
+import { DashboardComponent } from './main-content/content-tabs/dashboard.component';
 import { SideNavItemComponent } from './side-nav/side-nav-item/side-nav-item.component';
 
 import {InventoryService} from './service/inventory.service';
@@ -25,7 +25,7 @@ import { AppRoutingModule } from './app.routing.module';
     SideNavComponent,
     MainContentComponent,
     FooterComponent,
-    ContentTabsComponent,
+    DashboardComponent,
     SideNavItemComponent,
     ValueByPublisherComponent,
     MostValuableIssuesComponent,

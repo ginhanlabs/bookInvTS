@@ -2,7 +2,7 @@
     <span *ngFor="let inv of inventoryList; let i = index" >
         <span *ngIf="publisherChild === inv.publisher">
             <li *ngFor="let title of inv.Titles;trackBy trackByTitleFn; let i = index" class="d-flex justify-content-between align-items-center">
-              {{title.name}}
+             <a [routerLink]="['details', title.name]"> {{title.name}}</a>
               <span class="badge badge-primary badge-pill" (countIssues)='title.count' >{{title.count}}</span>
             </li>
           </span>
