@@ -9,6 +9,4 @@ import { AppRoutingModule } from './app.routing.module';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
- 
 }

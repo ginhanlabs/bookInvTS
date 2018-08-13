@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-
-import { MainContentComponent } from './main-content/main-content.component';
-import { TabDetailsComponent } from './main-content/content-tabs/tab-details/tab-details.component';
+import { DetailsComponent } from './main-content/content-tabs/details/details.component';
+import { DashboardComponent } from './main-content/content-tabs/dashboard.component';
 
 
 const appRoutes: Routes = [
-    { path: '', component: MainContentComponent },
-    { path: 'details/:id', component: TabDetailsComponent}
+    { path: '', component: DashboardComponent },
+    { path: 'details/:id', component: DetailsComponent}
 ]
 
 @NgModule({
