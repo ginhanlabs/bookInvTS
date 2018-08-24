@@ -7,12 +7,16 @@ import { DashboardComponent } from './main-content/content-tabs/dashboard.compon
 
 const appRoutes: Routes = [
     { path: '', component: DashboardComponent },
-    { path: 'details/:id', component: DetailsComponent}
+    { path: 'details/:title', component: DetailsComponent}
+    //TODO: figure out how to reload url with new params
+   //  runGuardsAndResolvers : paramsOrQueryParamsChange
 ]
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes, {
+            onSameUrlNavigation: 'reload'
+          })
     ],
     exports: [RouterModule]
 })

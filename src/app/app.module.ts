@@ -16,6 +16,7 @@ import { ValueOfCollectionComponent } from './main-content/content-tabs/value-of
 import { DetailsComponent } from './main-content/content-tabs/details/details.component';
 import { ChartComponent } from './main-content/content-tabs/chart/chart.component';
 import { AppRoutingModule } from './app.routing.module';
+import { ActionMenuComponent } from './shared/action-menu/action-menu.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AppRoutingModule } from './app.routing.module';
     ValueOfCollectionComponent,
     DetailsComponent,
     ChartComponent,
+    ActionMenuComponent,
   ],
   imports: [
     BrowserModule,
