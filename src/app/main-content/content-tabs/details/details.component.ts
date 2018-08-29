@@ -15,7 +15,7 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(
       params => {
-        this.bookTitle = params.title;
+        this.bookTitle = params['title'];
       }
     )
   }
