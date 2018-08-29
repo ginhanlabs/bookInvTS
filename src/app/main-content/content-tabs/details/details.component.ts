@@ -13,8 +13,11 @@ export class DetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.bookTitle = this.route.snapshot.params.title;
-    console.log(this.route.snapshot.params.title); 
+    this.route.params.subscribe(
+      params => {
+        this.bookTitle = params.title;
+      }
+    )
   }
 
 }
