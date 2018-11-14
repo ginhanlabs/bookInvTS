@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Book } from '../../models/book.model';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
   bookTitle: string;
+  books: Book;
 
   constructor(private route: ActivatedRoute) { }
 

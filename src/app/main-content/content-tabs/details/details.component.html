@@ -14,51 +14,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>4.00</td>
-      <td>1</td>
-      <td>@good</td>
-      <td>5.00</td>
-      <td>1</td>
-      <td>na</td>
-      <td>01/02/1980</td>
-      <td>
-        <button class="btn btn-default">
-          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        </button>
-        <button class="btn btn-default">
-          <i class="fa fa-trash-o" aria-hidden="true"></i>
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>4.00</td>
-      <td>1</td>
-      <td>@good</td>
-      <td>5.00</td>
-      <td>1</td>
-      <td>na</td>
-      <td>01/02/1980</td>
-      <td>
-        <button class="btn btn-default">
-          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        </button>
-        <button class="btn btn-default">
-          <i class="fa fa-trash-o" aria-hidden="true"></i>
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>4.00</td>
-      <td>1</td>
-      <td>@good</td>
-      <td>5.00</td>
-      <td>1</td>
-      <td>na</td>
-      <td>01/02/1980</td>
+    <tr *ngFor="let book of books; index as i">
+      <th scope="row">{{ book.issue }}</th>
+      <td>{{ book.price}}</td>
+      <td>{{ book.qty }}</td>
+      <td>{{ book.condition }}</td>
+      <td>{{ book.value }}</td>
+      <td>{{ book.box }}</td>
+      <td>{{ book.date}}</td>
       <td>
         <button class="btn btn-default">
           <i class="fa fa-pencil-square-o" aria-hidden="true"></i>

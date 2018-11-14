@@ -8,7 +8,16 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-     
+      <li>
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary action-button" id="dropdownBasic1" ngbDropdownToggle>Action</button>
+          <div class="action-buttons" ngbDropdownMenu aria-labelledby="actionButtons">
+            <button class="dropdown-item" id="addBtn" (click)="actionOnBook('add')">Add</button>
+            <button class="dropdown-item" id="deleteBtn" (click)="actionOnBook('delete')">Delete</button>
+            <button class="dropdown-item" id="whateverBtn" (click)="actionOnBook('add')">Whatever</button>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
 </nav>

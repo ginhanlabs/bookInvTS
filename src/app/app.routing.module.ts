@@ -3,12 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DetailsComponent } from './main-content/content-tabs/details/details.component';
 import { DashboardComponent } from './main-content/content-tabs/dashboard.component';
+import { AddComponent } from './add/add.component';
 
 
 const appRoutes: Routes = [
     { path: '', component: DashboardComponent },
-    { path: 'details/:title', component: DetailsComponent}
-    //TODO: figure out how to reload url with new params
+    { path: 'details/:title', component: DetailsComponent},
+    { path: 'add', component: AddComponent }
    //  runGuardsAndResolvers : paramsOrQueryParamsChange
 ]
 
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
             onSameUrlNavigation: 'reload'
           })
     ],
-    exports: [RouterModule]
+    exports: [RouterModule],
+    declarations: [AddComponent]
 })
 
 export class AppRoutingModule{

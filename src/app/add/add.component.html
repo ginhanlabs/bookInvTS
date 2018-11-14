@@ -1,0 +1,79 @@
+<!-- this will use template way of creating the form -->
+
+<h3>Add Book</h3>
+<form>
+    <div class="row form-group">
+      <div class="col-md-4">
+        <label for="title" class="required">Title</label>
+        <input
+          id="title"
+          name="title"
+          class="form-control"
+          required
+          />
+      </div>
+      <div class="col-md-4">
+        <label for="publisher" class="required">Publisher</label>
+        <input
+          id="publisher"
+          name="publisher"
+          class="form-control"
+          required
+          />
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-4">
+        <label for="issue" class="required">Issue</label>
+        <input
+          id="issue"
+          name="issue"
+          class="form-control"
+          required
+          />
+      </div> 
+      <div class="col-md-4">
+          <label for="qty">Qty</label>
+          <input
+            id="qty"
+            name="qty"
+            class="form-control"
+            />
+        </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-4">
+        <label for="condition">Condition</label>
+        <input
+          id="condition"
+          name="condition"
+          class="form-control"
+          />
+      </div>
+      <div class="col-md-4">
+        <label for="value">Value</label>
+        <input
+          id="value"
+          name="value"
+          class="form-control"
+          />
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-11">
+        <label for="notes">Notes</label>
+        <textarea
+          id="notes"
+          name="notes"
+          class="form-control">
+        </textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-11">
+        <div class="text-right">
+          <button type="button" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </div>
+</form>
