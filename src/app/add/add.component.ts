@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
-
+  @ViewChild("addForm") addForm : NgForm;
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSubmit(f:NgForm){
+    console.log("dfdd");
+  }
 }

@@ -1,24 +1,44 @@
 <!-- this will use template way of creating the form -->
 
 <h3>Add Book</h3>
-<form>
+<form novalidate (ngSubmit)="onSubmit(addForm)" #addForm="ngForm">
     <div class="row form-group">
       <div class="col-md-4">
-        <label for="title" class="required">Title</label>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" 
+                type="button" 
+                id="titles" 
+                data-toggle="dropdown" 
+                aria-haspopup="true" 
+                aria-expanded="false">
+              Select Title
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item">Action</a>
+              <a class="dropdown-item">Another action</a>
+              <a class="dropdown-item">Something else here</a>
+            </div>
+          </div>
+        <!-- <label for="title" class="required">Title</label><span class="text-danger pull-right" *ngIf="!bookTitle.valid && bookTitle.touched">Required</span>
         <input
-          id="title"
-          name="title"
+          type="text"
+          id="bookTitle"
+          name="bookTitle"
           class="form-control"
           required
-          />
+          ngModel
+          #bookTitle="ngModel"
+          />  -->
       </div>
       <div class="col-md-4">
-        <label for="publisher" class="required">Publisher</label>
+        <label for="publisher" class="required">Publisher</label><span class="text-danger pull-right" *ngIf="!publisher.valid && publisher.touched">Required</span>
         <input
           id="publisher"
           name="publisher"
           class="form-control"
           required
+          ngModel
+          #publisher="ngModel"
           />
       </div>
     </div>
@@ -26,18 +46,26 @@
       <div class="col-md-4">
         <label for="issue" class="required">Issue</label>
         <input
+          type="number"
+          min="0"
+          max="5000"
           id="issue"
           name="issue"
           class="form-control"
           required
+          ngModel
           />
       </div> 
       <div class="col-md-4">
           <label for="qty">Qty</label>
           <input
+            type="number"
+            min="0"
+            max="100"
             id="qty"
             name="qty"
             class="form-control"
+            ngModel
             />
         </div>
     </div>
@@ -48,6 +76,7 @@
           id="condition"
           name="condition"
           class="form-control"
+          ngModel
           />
       </div>
       <div class="col-md-4">
@@ -56,6 +85,7 @@
           id="value"
           name="value"
           class="form-control"
+          ngModel
           />
       </div>
     </div>
@@ -65,14 +95,18 @@
         <textarea
           id="notes"
           name="notes"
-          class="form-control">
+          class="form-control"
+          ngModel>
         </textarea>
       </div>
     </div>
     <div class="row">
       <div class="col-md-11">
         <div class="text-right">
-          <button type="button" class="btn btn-primary">Add</button>
+          <button type="submit" 
+            class="btn btn-primary"
+            [disabled]="!addForm.valid">
+            Add</button>
         </div>
       </div>
     </div>

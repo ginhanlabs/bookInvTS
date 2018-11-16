@@ -2,3 +2,8 @@ label.required:after {
     content:"*";
     color:red;
   }
+
+  /* .text-required {
+    padding: 5px 0px;
+    color: red;
+  } */

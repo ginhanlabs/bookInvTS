@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -16,6 +15,10 @@ import { ValueOfCollectionComponent } from './main-content/content-tabs/value-of
 import { DetailsComponent } from './main-content/content-tabs/details/details.component';
 import { ChartComponent } from './main-content/content-tabs/chart/chart.component';
 import { AppRoutingModule } from './app.routing.module';
+import { FormsModule } from '@angular/forms';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { AppRoutingModule } from './app.routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    FormsModule,
+    BsDropdownModule.forRoot(),
+    AccordionModule.forRoot(),
+    ButtonsModule.forRoot()
    
   ],
   providers: [InventoryService],

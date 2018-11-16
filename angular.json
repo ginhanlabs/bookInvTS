@@ -21,12 +21,13 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.min.css"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -74,6 +75,8 @@
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.min.css"

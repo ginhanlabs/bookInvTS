@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @Component({
   selector: 'app-navbar',
