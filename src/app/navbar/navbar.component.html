@@ -7,9 +7,9 @@
       </button>
       <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
           role="menu" aria-labelledby="button-basic">
-        <li role="menuitem"><a class="dropdown-item">Add</a></li>
-        <li role="menuitem"><a class="dropdown-item">Delete</a></li>
-        <li role="menuitem"><a class="dropdown-item">Whatever</a></li>
+        <li role="menuitem"><a class="dropdown-item" [routerLink]= "['/add']">Add</a></li>
+        <li role="menuitem"><a class="dropdown-item" [routerLink]= "['/delete']">Delete</a></li>
+        <li role="menuitem"><a class="dropdown-item" [routerLink]= "['/add']">Whatever</a></li>
       </ul>
     </div>
 </nav>

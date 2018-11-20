@@ -1,19 +1,6 @@
 
-<accordion>
+<accordion class="accord-padding">
   <accordion-group *ngFor="let company of companies;trackBy: trackByCompanyFn  let i=index" [id]="i" [heading]="company.name" >
-      
-          <!-- <app-side-nav-item [publisherChild]="company.name"></app-side-nav-item> -->
-          <ul class="list-group">
-                <span *ngFor="let inv of inventoryList; let i = index" >
-                    <span *ngIf="publisherChild === inv.publisher">
-                        <li *ngFor="let title of inv.Titles;trackBy trackByTitleFn; let i = index" class="d-flex justify-content-between align-items-center">
-                         <a [routerLink]="['details', title.name]"> {{title.name}}</a>
-                          <span class="badge badge-primary badge-pill" (countIssues)='title.count' >{{title.count}}</span>
-                        </li>
-                      </span>
-                  
-                </span>
-            </ul>
-     
+    <app-side-nav-item [publisherChild]="company.name"></app-side-nav-item>
   </accordion-group>
 </accordion>

@@ -3,7 +3,7 @@ label.required:after {
     color:red;
   }
 
-  /* .text-required {
-    padding: 5px 0px;
-    color: red;
-  } */
+ hr {
+  width:2;
+  background-color: #000000
+}

@@ -16,7 +16,7 @@ export class SideNavComponent {
   constructor(InventoryService: InventoryService) {
     this.companies = InventoryService.getCompanies();
     this.totalCount = '0';
-    this.inventoryList = InventoryService.getTitles();
+    this.inventoryList = InventoryService.getCollection();
      
    }
   

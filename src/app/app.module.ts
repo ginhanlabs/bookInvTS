@@ -19,6 +19,9 @@ import { FormsModule } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { TitleService } from './service/title.service';
+import { PublisherService } from './service/publisher.service';
+import { ConditionService } from './service/condition.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     ButtonsModule.forRoot()
    
   ],
-  providers: [InventoryService],
+  providers: [InventoryService, TitleService, PublisherService, ConditionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

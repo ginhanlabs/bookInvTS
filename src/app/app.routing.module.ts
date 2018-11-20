@@ -5,14 +5,13 @@ import { DetailsComponent } from './main-content/content-tabs/details/details.co
 import { DashboardComponent } from './main-content/content-tabs/dashboard.component';
 import { AddComponent } from './add/add.component';
 import { FormsModule } from '@angular/forms';
-/* import { TitleTypeAheadComponent } from './shared/title-type-ahead/title-type-ahead.component'; */
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead'
 
 
 const appRoutes: Routes = [
     { path: '', component: DashboardComponent },
     { path: 'details/:title', component: DetailsComponent},
     { path: 'add', component: AddComponent }
-   //  runGuardsAndResolvers : paramsOrQueryParamsChange
 ]
 
 @NgModule({
@@ -21,7 +20,8 @@ const appRoutes: Routes = [
             onSameUrlNavigation: 'reload'
           }),
           CommonModule,
-          FormsModule
+          FormsModule,
+          TypeaheadModule.forRoot(),
     ],
     exports: [RouterModule],
     declarations: [AddComponent]

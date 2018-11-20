@@ -1,42 +1,28 @@
 <!-- this will use template way of creating the form -->
 
 <h3>Add Book</h3>
+<hr/>
 <form novalidate (ngSubmit)="onSubmit(addForm)" #addForm="ngForm">
     <div class="row form-group">
       <div class="col-md-4">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" 
-                type="button" 
-                id="titles" 
-                data-toggle="dropdown" 
-                aria-haspopup="true" 
-                aria-expanded="false">
-              Select Title
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item">Action</a>
-              <a class="dropdown-item">Another action</a>
-              <a class="dropdown-item">Something else here</a>
-            </div>
-          </div>
-        <!-- <label for="title" class="required">Title</label><span class="text-danger pull-right" *ngIf="!bookTitle.valid && bookTitle.touched">Required</span>
-        <input
-          type="text"
-          id="bookTitle"
+        <label for="bookTitle" class="required">Title</label><span class="text-danger pull-right" *ngIf="!bookTitle.valid && bookTitle.touched">Required</span>
+        <input 
           name="bookTitle"
+          id="bookTitle"
+          [(ngModel)]="selectedTitle"
+          [typeahead]="bookList"
           class="form-control"
           required
-          ngModel
-          #bookTitle="ngModel"
-          />  -->
+          #bookTitle="ngModel">
       </div>
       <div class="col-md-4">
-        <label for="publisher" class="required">Publisher</label><span class="text-danger pull-right" *ngIf="!publisher.valid && publisher.touched">Required</span>
+        <label for="publisher" >Publisher</label><span class="text-danger pull-right" *ngIf="!publisher.valid && publisher.touched">Required</span>
         <input
           id="publisher"
           name="publisher"
           class="form-control"
-          required
+          [(ngModel)]="selectedPublisher"
+          [(typeahead)]="publisherList"
           ngModel
           #publisher="ngModel"
           />
@@ -76,7 +62,10 @@
           id="condition"
           name="condition"
           class="form-control"
+          [(ngModel)] = "selectedCondition"
+          [(typeahead)] = "conditionList"
           ngModel
+          #condition = "ngModel"
           />
       </div>
       <div class="col-md-4">
