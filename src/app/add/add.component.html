@@ -29,17 +29,17 @@
       </div>
     </div>
     <div class="row form-group">
-      <div class="col-md-4">
-        <label for="issue" class="required">Issue</label>
+      <div class="col-md-4">{{issue.length}}
+        <label for="issue" class="required">Issue </label><span class="text-danger pull-right" *ngIf="!issue.valid && issue.touched">Invalid input</span>
         <input
           type="number"
-          min="0"
-          max="5000"
           id="issue"
           name="issue"
+          #issue="ngModel"
           class="form-control"
           required
           ngModel
+          pattern="^\d{4}"
           />
       </div> 
       <div class="col-md-4">
@@ -100,3 +100,4 @@
       </div>
     </div>
 </form>
+<app-result-table></app-result-table>
