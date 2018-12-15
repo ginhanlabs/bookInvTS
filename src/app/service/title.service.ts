@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class TitleService{
-    titles = [
+    titleList = [
         "Amazing Spider-man",
         "Aquaman",
         "Batman",
@@ -21,10 +21,10 @@ export class TitleService{
     ]
 
     getTitles(){
-        return this.titles;
+        return this.titleList;
     }
 
-    addTitles(newTitle){
-        this.titles.push(newTitle);
+    addTitles(newTitle: string){
+        this.titleList.push(newTitle);
     }
 }

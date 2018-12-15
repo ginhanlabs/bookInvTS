@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IBook } from '../interfaces/iBook';
+import { Book } from '../shared/models/book.model';
 import { Subject } from 'rxjs/Subject';
 
 @Injectable()
@@ -9,7 +9,7 @@ export class InventoryService {
     "Mint", "Near Mint", "Very Fine", "Fine", "Good", "Poor"
   ]
 
-  private collection = new Array();
+  private collection = new Array<Book>();
 
   bookAdded = new Subject();
 
@@ -54,7 +54,7 @@ export class InventoryService {
     ]
   }
 
-  addBook(book){
+  addBook(book:Book){
       this.collection.push(book);
       this.bookAdded.next(this.collection.slice());
       ;

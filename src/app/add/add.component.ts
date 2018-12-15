@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TitleService } from '../service/title.service';
 import { PublisherService } from '../service/publisher.service';
-import { IBook } from '../interfaces/IBook';
+import { Book } from '../shared/models/book.model';
 import { InventoryService } from '../service/inventory.service';
 
 @Component({
@@ -37,5 +37,10 @@ export class AddComponent implements OnInit {
   onSubmit(f:NgForm){
     console.log(f);
     this.inventoryService.addBook(f.value);
+    this.resetForm();
+  }
+
+  resetForm(){
+    this.addForm.reset();
   }
 }

@@ -7,8 +7,8 @@
       <div class="col-md-4">
         <label for="bookTitle" class="required">Title</label><span class="text-danger pull-right" *ngIf="!bookTitle.valid && bookTitle.touched">Required</span>
         <input 
-          name="bookTitle"
-          id="bookTitle"
+          name="title"
+          id="title"
           [(ngModel)]="selectedTitle"
           [typeahead]="titleList"
           class="form-control"

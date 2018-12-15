@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Book } from '../../models/book.model';
+import { Book } from '../../../shared/models/book.model';
+import { InventoryService } from '../../../service/inventory.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class DetailsComponent implements OnInit {
   bookTitle: string;
   books: Book;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private inventoryservice: InventoryService) { }
 
   ngOnInit() {
     this.route.params.subscribe(
