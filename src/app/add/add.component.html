@@ -10,7 +10,7 @@
           name="bookTitle"
           id="bookTitle"
           [(ngModel)]="selectedTitle"
-          [typeahead]="bookList"
+          [typeahead]="titleList"
           class="form-control"
           required
           #bookTitle="ngModel">
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="row form-group">
-      <div class="col-md-4">{{issue.length}}
+      <div class="col-md-4">
         <label for="issue" class="required">Issue </label><span class="text-danger pull-right" *ngIf="!issue.valid && issue.touched">Invalid input</span>
         <input
           type="number"
@@ -39,7 +39,6 @@
           class="form-control"
           required
           ngModel
-          pattern="^\d{4}"
           />
       </div> 
       <div class="col-md-4">
@@ -51,7 +50,7 @@
             id="qty"
             name="qty"
             class="form-control"
-            ngModel
+            [(ngModel)] = "formDefaults.qty"
             />
         </div>
     </div>
@@ -62,7 +61,7 @@
           id="condition"
           name="condition"
           class="form-control"
-          [(ngModel)] = "selectedCondition"
+          [(ngModel)] = "formDefaults.selectedCondition"
           [(typeahead)] = "conditionList"
           ngModel
           #condition = "ngModel"

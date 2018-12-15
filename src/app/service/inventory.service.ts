@@ -1,9 +1,24 @@
 import { Injectable } from '@angular/core';
+import { IBook } from '../interfaces/iBook';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class InventoryService {
 
-  constructor() { }
+  CONDITIONS = [
+    "Mint", "Near Mint", "Very Fine", "Fine", "Good", "Poor"
+  ]
+
+  private collection = new Array();
+
+  bookAdded = new Subject();
+
+  constructor() {
+   }
+
+  getConditions(){
+    return this.CONDITIONS;
+  }
 
   getCompanies() {
     return [
@@ -37,5 +52,11 @@ export class InventoryService {
           ]
       }
     ]
+  }
+
+  addBook(book){
+      this.collection.push(book);
+      this.bookAdded.next(this.collection.slice());
+      ;
   }
 }

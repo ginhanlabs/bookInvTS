@@ -21,7 +21,6 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { TitleService } from './service/title.service';
 import { PublisherService } from './service/publisher.service';
-import { ConditionService } from './service/condition.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +45,7 @@ import { ConditionService } from './service/condition.service';
     ButtonsModule.forRoot()
    
   ],
-  providers: [InventoryService, TitleService, PublisherService, ConditionService],
+  providers: [InventoryService, TitleService, PublisherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

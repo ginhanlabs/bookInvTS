@@ -3,7 +3,8 @@ import { NgForm } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TitleService } from '../service/title.service';
 import { PublisherService } from '../service/publisher.service';
-import { ConditionService } from '../service/condition.service';
+import { IBook } from '../interfaces/IBook';
+import { InventoryService } from '../service/inventory.service';
 
 @Component({
   selector: 'app-add',
@@ -12,22 +13,29 @@ import { ConditionService } from '../service/condition.service';
 })
 export class AddComponent implements OnInit {
   @ViewChild("addForm") addForm : NgForm;
-  selectedTitle:string;
-  selectedPublisher: string;
-  selectedCondition: string;
+
+  formDefaults = {
+    selectedCondition: "Near Mint",
+    qty: 1
+  }
+
   publisherList: string[];
   conditionList: string[];
-  bookList: string[];
-  constructor(private titleService: TitleService, private publisherService: PublisherService, private conditionService: ConditionService) { }
+  titleList: string[];
+
+  constructor(private titleService: TitleService, private publisherService: PublisherService, private inventoryService: InventoryService) { 
+    
+  }
 
   ngOnInit() {
-    this.bookList = this.titleService.getTitles();
+    this.titleList = this.titleService.getTitles();
     this.publisherList = this.publisherService.getPublisherList();
-    this.conditionList = this.conditionService.getConditions();
+    this.conditionList = this.inventoryService.getConditions();
 
   }
 
   onSubmit(f:NgForm){
-    console.log("dfdd");
+    console.log(f);
+    this.inventoryService.addBook(f.value);
   }
 }

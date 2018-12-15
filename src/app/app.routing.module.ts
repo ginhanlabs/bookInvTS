@@ -6,7 +6,7 @@ import { DashboardComponent } from './main-content/content-tabs/dashboard.compon
 import { AddComponent } from './add/add.component';
 import { FormsModule } from '@angular/forms';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
-import { DeleteComponent } from './delete/delete.component';
+import { SearchComponent } from './search/search.component';
 import { ResultTableComponent } from './add/result-table/result-table.component'
 
 
@@ -14,7 +14,7 @@ const appRoutes: Routes = [
     { path: '', component: DashboardComponent },
     { path: 'details/:title', component: DetailsComponent},
     { path: 'add', component: AddComponent },
-    { path: 'delete', component: DeleteComponent }
+    { path: 'search', component: SearchComponent }
 ]
 
 @NgModule({
@@ -27,7 +27,7 @@ const appRoutes: Routes = [
           TypeaheadModule.forRoot(),
     ],
     exports: [RouterModule],
-    declarations: [AddComponent, DeleteComponent, ResultTableComponent]
+    declarations: [AddComponent, SearchComponent, ResultTableComponent]
 })
 
 export class AppRoutingModule{
