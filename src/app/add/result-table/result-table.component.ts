@@ -17,8 +17,8 @@ export class ResultTableComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.bookSubscription = this.inventoryService.bookAdded
       .subscribe(
-        ( book : Book[]) =>{
-          this.newBooks.push(...book);
+        ( books : Book[]) =>{
+          this.newBooks = books;
         })
   }
 

@@ -3,17 +3,20 @@
 <h3>Add Book</h3>
 <hr/>
 <form novalidate (ngSubmit)="onSubmit(addForm)" #addForm="ngForm">
+  <div id="formData"
+   >
+  
     <div class="row form-group">
       <div class="col-md-4">
-        <label for="bookTitle" class="required">Title</label><span class="text-danger pull-right" *ngIf="!bookTitle.valid && bookTitle.touched">Required</span>
+        <label for="bookTitle" class="required">Title</label><span class="text-danger pull-right" *ngIf="!title.valid && title.touched">Required</span>
         <input 
           name="title"
           id="title"
-          [(ngModel)]="selectedTitle"
+          ngModel
           [typeahead]="titleList"
           class="form-control"
           required
-          #bookTitle="ngModel">
+          #title="ngModel">
       </div>
       <div class="col-md-4">
         <label for="publisher" >Publisher</label><span class="text-danger pull-right" *ngIf="!publisher.valid && publisher.touched">Required</span>
@@ -21,7 +24,6 @@
           id="publisher"
           name="publisher"
           class="form-control"
-          [(ngModel)]="selectedPublisher"
           [(typeahead)]="publisherList"
           ngModel
           #publisher="ngModel"
@@ -50,7 +52,7 @@
             id="qty"
             name="qty"
             class="form-control"
-            [(ngModel)] = "formDefaults.qty"
+            [ngModel] = "qty"
             />
         </div>
     </div>
@@ -61,10 +63,8 @@
           id="condition"
           name="condition"
           class="form-control"
-          [(ngModel)] = "formDefaults.selectedCondition"
+          [ngModel] = "condition"
           [(typeahead)] = "conditionList"
-          ngModel
-          #condition = "ngModel"
           />
       </div>
       <div class="col-md-4">
@@ -98,5 +98,6 @@
         </div>
       </div>
     </div>
+  </div>
 </form>
 <app-result-table></app-result-table>

@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import {InventoryService} from '../service/inventory.service';
-import { ICompany } from '../interfaces/ICompany';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 @Component({
@@ -9,7 +8,7 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
   styleUrls: ['./side-nav.component.css'],
 })
 export class SideNavComponent {
-  companies: ICompany[];
+  companies;
   @Input() totalCount: string;
   inventoryList
 

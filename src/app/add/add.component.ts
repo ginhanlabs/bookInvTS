@@ -14,33 +14,35 @@ import { InventoryService } from '../service/inventory.service';
 export class AddComponent implements OnInit {
   @ViewChild("addForm") addForm : NgForm;
 
-  formDefaults = {
-    selectedCondition: "Near Mint",
-    qty: 1
-  }
-
   publisherList: string[];
   conditionList: string[];
   titleList: string[];
 
+  condition="Mint";
+  qty = 1;
+  
   constructor(private titleService: TitleService, private publisherService: PublisherService, private inventoryService: InventoryService) { 
-    
   }
 
   ngOnInit() {
     this.titleList = this.titleService.getTitles();
     this.publisherList = this.publisherService.getPublisherList();
     this.conditionList = this.inventoryService.getConditions();
-
   }
 
   onSubmit(f:NgForm){
     console.log(f);
     this.inventoryService.addBook(f.value);
-    this.resetForm();
+    this.addForm.resetForm();
+    this.setformDefaults();
   }
 
-  resetForm(){
-    this.addForm.reset();
+  setformDefaults(){
+    this.addForm.form.patchValue(
+      {
+        qty: 1,
+        condition: 'Fine'
+      }
+    )
   }
 }
